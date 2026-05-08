@@ -1,79 +1,21 @@
-Dexjoco Research License
+MIT License
 
 Copyright (c) 2026 Dexjoco contributors
 
-This repository is a public research release. It is source-available for
-non-commercial scientific research use only. It is not an open-source license.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-Permission is granted, free of charge, to any person or organization obtaining
-a copy of this software and associated documentation files (the "Software") to
-use, reproduce, modify, and share the Software, subject to the following
-conditions:
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-1. Allowed purpose
-
-   You may use the Software solely for non-commercial scientific research,
-   academic study, internal evaluation, and reproduction of published research
-   results.
-
-2. No commercial use
-
-   You may not use the Software, in whole or in part, for any commercial
-   purpose. Prohibited uses include, without limitation:
-
-   - selling or licensing the Software or derivative works;
-   - providing paid services based on the Software;
-   - using the Software in support of commercial product development;
-   - using the Software in a production or revenue-generating system;
-   - distributing the Software as part of a commercial offering.
-
-3. Attribution and notice preservation
-
-   If you share the Software or a modified version of it, you must:
-
-   - retain this license text;
-   - preserve existing copyright, attribution, and third-party notices;
-   - clearly state that you made modifications, if any.
-
-4. Third-party components
-
-   Some files or directories in this repository may be subject to separate
-   license terms from their original authors. Those terms remain in effect for
-   the applicable files and directories.
-
-   In particular, bundled third-party components keep their own licenses,
-   including but not limited to:
-
-   - `teleoperation/GeoRT/`
-   - any file or directory that contains its own `LICENSE`, `COPYING`, or
-     equivalent notice
-
-   For those components, the third-party license controls that component to the
-   extent required by law or by the upstream licensor.
-
-5. No trademark license
-
-   This license does not grant permission to use the names, trademarks, service
-   marks, or logos of the authors or contributors, except as required for
-   reasonable attribution.
-
-6. Disclaimer of warranty
-
-   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-   IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-   FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND NON-INFRINGEMENT.
-
-7. Limitation of liability
-
-   IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-   DAMAGES, OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT, OR
-   OTHERWISE, ARISING FROM, OUT OF, OR IN CONNECTION WITH THE SOFTWARE OR THE
-   USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-8. Termination
-
-   Any use of the Software outside the scope of this license automatically
-   terminates the rights granted under this license.
-
-If you need commercial rights or a different form of permission, obtain
-separate written permission from the relevant copyright holder(s).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

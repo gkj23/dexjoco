@@ -1,6 +1,6 @@
 ## dexjoco
 
-Dexjoco is a MuJoCo-based simulation benchmark for dexterous hands
+DexJoCo is a MuJoCo-based simulation benchmark for dexterous hands
 
 ## Installation
 
@@ -12,16 +12,16 @@ conda activate dexjoco
 
 ## Teleoperation Components
 
-SteamVR or OpenVR tooling. Optional teleoperation helpers live under
+teleoperation helpers live under
 [`teleoperation/`](teleoperation):
 
-- [`teleoperation/vive_bridge`](teleoperation/vive_bridge): Dexjoco-maintained
+- [`teleoperation/vive_bridge`](teleoperation/vive_bridge): DexJoCo-maintained
   OpenVR sender for Vive tracker poses on UDP port `5012`
-- [`teleoperation/rokoko`](teleoperation/rokoko): Dexjoco-maintained Rokoko
+- [`teleoperation/rokoko`](teleoperation/rokoko): DexJoCo-maintained Rokoko
   Studio bridge for forwarding canonicalized raw hand keypoints from another PC
-  to the GeoRT/Dexjoco stack
+  to the GeoRT/DexJoCo stack
 - [`teleoperation/GeoRT`](teleoperation/GeoRT): third-party GeoRT code kept
-  in-repo for non-commercial research use, including Dexjoco's Rokoko-to-UDP
+  in-repo for non-commercial research use, including DexJoCo's Rokoko-to-UDP
   hand retargeting scripts for ports `5014` and `5016`
 
 The simulator itself only depends on the UDP packets described in
@@ -50,11 +50,9 @@ The Zarr replay buffer and H.264 video writer live in the local
 
 ## License
 
-The root of this repository is released under the
-[`Dexjoco Research License`](LICENSE). It is source-available for
-non-commercial scientific research use only and is not an open-source
-license.
+DexJoCo-owned code in this repository is released under the
+[`MIT License`](LICENSE).
 
-Bundled third-party components may keep separate license terms. In
-particular, [`teleoperation/GeoRT`](teleoperation/GeoRT) remains under its own
-third-party non-commercial license.
+Bundled third-party components keep their separate license terms. In
+particular, [`teleoperation/GeoRT`](teleoperation/GeoRT) remains under its
+upstream non-commercial license and is not covered by the MIT License.
