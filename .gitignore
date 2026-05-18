@@ -2,10 +2,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 .DS_Store
+.vscode/
 
 /outputs
 /checkpoints
 /datasets
+/_replay_test/
 
 teleoperation/GeoRT/checkpoint/**/*.pth
 !teleoperation/GeoRT/checkpoint/fk_model_allegro_left.pth
