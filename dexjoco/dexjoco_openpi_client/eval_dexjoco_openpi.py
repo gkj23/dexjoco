@@ -233,6 +233,8 @@ def main(
 ):
     if render_mode == "rgb_array":
         os.environ.setdefault("MUJOCO_GL", "egl")
+    else:
+        os.environ.setdefault("MUJOCO_GL", "glfw")
     _set_seed(seed)
 
     # Load evaluation configuration.
@@ -271,6 +273,7 @@ def main(
         prompt=prompt,
         render_mode=render_mode,
         pad_state_dim46=pad_state_dim46,
+        password=cfg.get("password", None),  # Pass password from config if available
     )
     env.start()
 
