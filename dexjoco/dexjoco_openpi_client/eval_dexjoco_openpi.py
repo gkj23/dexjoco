@@ -99,7 +99,7 @@ def _interp_dual_arm_action(
     ).astype(interp_action.dtype, copy=False)
     return interp_action
 
-
+import traceback
 def inference_process(
     obs_queue: mp.Queue,
     action_queue: mp.Queue,
@@ -113,15 +113,19 @@ def inference_process(
     _set_seed(seed)
 
     # Inference worker: receive observations and query the OpenPI policy server.
+    print(host,port)
     client = websocket_client_policy.WebsocketClientPolicy(host=host, port=port)
-
+    
     while not stop_event.is_set():
+        print("Get to the subprocess", flush=True)
         obs: Observation | None = get_latest(obs_queue)
         if obs is None:
             stop_event.wait(0.01)
             continue
 
+        print(f"[infer] request ts={obs.timestamp}", flush=True)
         result = client.infer(obs.obs)
+        print(f"[infer] response ts={obs.timestamp}, shape={result['actions'].shape}", flush=True)
         action_chunk = result["actions"]
 
         action_queue.put(ActionChunk(action=action_chunk, timestamp=obs.timestamp))
@@ -338,9 +342,11 @@ def main(
 
             # Episode loop.
             while True:
+                # print(f"[proc] alive={inference_proc.is_alive()} exitcode={inference_proc.exitcode}")
                 receive_actions(action_queue, actions_buffer, timestamp, dual_arm)
 
                 # Execute the scheduled action for this timestamp, or hold the pose.
+                # print(f"[loop] ts={timestamp}, buf={len(actions_buffer)}, infer_flag={inferencing_event.is_set()}, aq_empty={action_queue.empty()}")
                 if actions_buffer:
                     assert actions_buffer[0].timestamp == timestamp, (
                         "Buffer head timestamp must match current timestamp"

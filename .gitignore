@@ -8,6 +8,9 @@ __pycache__/
 /checkpoints
 /datasets
 /_replay_test/
+/ckpt
+/eval_starvla
+/
 
 teleoperation/GeoRT/checkpoint/**/*.pth
 !teleoperation/GeoRT/checkpoint/fk_model_allegro_left.pth
